@@ -1,0 +1,52 @@
+
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+
+</head>
+<body>  
+
+<form accept-charset="UTF-8" action="server.php" name="frm1" method="POST">
+
+	 <label style="margin-top: 20px;">Nome*</label>
+	 <input placeholder="" id="nome" name="nome" type="text" pattern="[A-Za-z\s]+$" >
+	 <label style="margin-top: 20px;">Matricula*</label>
+	 <input placeholder="ABC123" id="matricula" minlength="3" name="matricula" type="text" >
+	 <label style="margin-top: 20px;">Data de Nascimento*</label>
+	 <input name="nascimento" id="nascimento" placeholder="__/__/____" minlength="10"  maxlength="10"  type="date" />
+		   
+	 <input type="hidden" name="inserir" id="inserir" value="0">
+	 <input type="hidden" name="deletar" id="deletar" value="0">
+	 <input type="hidden" name="alterar" id="alterar" value="0">
+	 <input type="hidden" name="listar"  id="listar"  value="0">
+
+
+		<div style="margin-top: 20px;">
+			<button  id="alterar1" onclick="alterarr()"  style="padding: 11px 32px;margin-top: 20px;" type="submit">Alterar Usuario</button>
+            <button  id="deletar1" onclick="deletarr()" style="padding: 11px 32px;margin-top: 20px;" type="submit">Deletar usuario</button>
+			<button  id="inserir1" onclick="inserirr()" style="padding: 11px 32px;margin-top: 20px;" type="submit">inserir usuario</button>
+			<button  id="listar1"  onclick="listarr()"  style="padding: 11px 32px;margin-top: 20px;" type="submit">Listar usuarios</button>
+		</div>
+
+</form>
+
+
+	<script type="text/javascript">
+		function inserirr(){
+				document.getElementById("inserir").value="1";
+		}
+		function deletarr(){
+				document.getElementById("deletar").value="1";
+		}
+		function alterarr(){
+				document.getElementById("alterar").value="1";
+		}
+		function listarr(){
+				document.getElementById("listar").value="1";
+		}
+	</script>
+</body>
+</html>
